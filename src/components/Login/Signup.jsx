@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { auth, googleAuthProvider } from "../../firebase";
 import GoogleButton from "react-google-button";
-import { createUserWithEmailAndPassword, signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
+import { createUserWithEmailAndPassword, signInWithPopup } from "firebase/auth";
 import { Link, useNavigate } from "react-router-dom";
 import './Login.css'
-const Login = () => {
+const Signup = () => {
   const [Email , setEmail] = useState();
   const [Password , setPassword] = useState();
 
@@ -26,7 +26,7 @@ const Login = () => {
     e.preventDefault()
     try {
 
-      const result = await signInWithEmailAndPassword(auth, Email, Password);
+      const result = await createUserWithEmailAndPassword(auth, Email, Password);
       console.log(result);
       localStorage.setItem("token", result.user.accessToken);
       localStorage.setItem("user", JSON.stringify(result.user));
@@ -51,7 +51,7 @@ const Login = () => {
   </div>
   <button type="submit">submit</button>
 </form>
-<p>Need To Signup <Link to="/Signup">Create Account</Link></p>
+<p>Need To Login <Link to="/">Login</Link></p>
 <hr className="hrline"/>
 
     <GoogleButton  onClick={signInWithGoogle}/>
@@ -61,7 +61,7 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Signup;
 
 
 

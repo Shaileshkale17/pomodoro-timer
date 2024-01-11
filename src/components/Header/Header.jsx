@@ -3,6 +3,7 @@ import assets  from "../../assets/pomodoro-technique-64.png";
 import { signOut } from "firebase/auth";
 import { auth } from "../../firebase";
 import { Link, useNavigate } from "react-router-dom";
+import Logout from "../Login/Logout";
 
 function Header() {
   const [userName, setUserName] = useState({});
@@ -38,7 +39,7 @@ navigate("/")
         </div>
         <div className="flex items-center">
           {userName == ""?(
-            <div className="text-white mr-4" onClick={()=>HeadleLogout}>Logout</div>
+            <Logout/>
             ):(
             <div className="text-white mr-4"><Link to='/'>Loging</Link></div>
            
