@@ -1,0 +1,35 @@
+.login-container {
+  background-image: url("https://st5.depositphotos.com/16122460/61949/i/450/depositphotos_619490338-stock-photo-kitchen-timer-shape-tomato-white.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.main_Class {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.formData {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.inputform {
+  display: grid;
+}
+.inputform input {
+  border: 1px solid #000;
+  border-radius: 4px;
+}
+
+.formData button{
+
+    background-color: transparent;
+    border: 1px solid;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 10px;
+
+}
+.hrline{
+  width: 100%;
+}

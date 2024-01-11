@@ -1,0 +1,68 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  text-align: center;
+  width: 100vh;
+  height: 87vh;
+  border-radius: 6px;
+  color: white;
+  align-items: center;
+  gap: 2rem;
+}
+.card h2{
+  font-size: 2rem;
+}
+
+.This_card {
+  height: 100vh;
+  background-image: url("https://www.freecodecamp.org/news/content/images/2022/09/jonatan-pie-3l3RwQdHRHg-unsplash.jpg");
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 27px;
+  margin: 20px;
+  padding: 2rem 1rem;
+}
+
+.button button {
+  padding: 10px 20px;
+  border-radius: 6px;
+  border: 1px solid white;
+  font-size: 1rem;
+  background-color: transparent;
+  color: white;
+}
+
+@media screen and (max-width: 600px) {
+  .card {
+    width: 90vw;
+    height: auto;
+  }
+
+  .This_card {
+    height: auto;
+  }
+
+  .button {
+    flex-direction: column;
+  }
+
+  .button button {
+    margin-top: 10px;
+  }
+}
